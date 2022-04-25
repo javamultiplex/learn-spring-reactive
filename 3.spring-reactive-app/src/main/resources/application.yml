@@ -1,0 +1,5 @@
+server:
+  port: 9090
+product:
+  api:
+    baseurl: http://localhost:8080
