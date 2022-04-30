@@ -1,14 +1,11 @@
 package com.github.javamultiplex.controller;
 
-import com.github.javamultiplex.publisher.DemoPublisher;
 import com.github.javamultiplex.subscriber.DemoSubscriber;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
-import java.util.List;
 import java.util.UUID;
-import java.util.stream.Stream;
 
 /**
  * @author Rohit Agarwal on 30/04/22 2:23 PM

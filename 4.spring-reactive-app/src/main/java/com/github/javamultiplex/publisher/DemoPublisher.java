@@ -10,19 +10,12 @@ import java.util.List;
  * @author Rohit Agarwal on 30/04/22 10:48 PM
  * @copyright github.com/javamultiplex
  */
-public class DemoPublisher implements Publisher<Integer> {
-
-    private final List<Integer> list;
-
-    public DemoPublisher(List<Integer> list) {
-        this.list = list;
-    }
+public record DemoPublisher(List<Integer> list) implements Publisher<Integer> {
 
     @Override
     public void subscribe(Subscriber<? super Integer> subscriber) {
         Subscription subscription = new Subscription() {
             int index = -1;
-
             @Override
             public void request(long l) {
                 index++;
